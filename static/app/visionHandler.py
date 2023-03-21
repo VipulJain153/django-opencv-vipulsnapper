@@ -1,5 +1,5 @@
-import cv2, os, imagePreprocessing
-from cvzone import FPS, overlayPNG
+import cv2, os, imagePreprocessing, time, keyboard
+from cvzone import FPS, overlayPNG, putTextRect
 from cvzone.FaceMeshModule import FaceMeshDetector
 
 class Vision:
@@ -67,6 +67,7 @@ class Vision:
         """
         This function applies all the changes to the image
         """
+        now = 100
         while True:
             try:
                 success, img = self.cap.read()
@@ -96,6 +97,14 @@ class Vision:
                     if self.showFPS:
                         self.CameraFPS.update(img, color = self.FPScolor)
 
+                    if keyboard.is_pressed("s"):
+                        cv2.imwrite(f"{os.path.abspath(os.path.dirname(__file__))}\\SavedImages\\"+"Image_"+time.strftime("%Y_%m_%d_%H_%M_%S")+".png",img)
+                        now = time.time()
+                    if now<time.time()-1.2<now+8:
+                        cv2.rectangle(img,(0,200),(1280,300),(0,255,0),cv2.FILLED)
+                        cv2.putText(img,"        Image Saved",(150,265),cv2.FONT_HERSHEY_DUPLEX,
+                                        2,(0,0,255),2)
+                        
                     cv2.imshow(self.ImageName, img)
 
                     key = cv2.waitKey(1)
