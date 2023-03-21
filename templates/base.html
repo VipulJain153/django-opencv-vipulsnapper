@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VipulSnapper - {% block title %}{% endblock title %}</title>
+    <script
+      src="https://kit.fontawesome.com/b938c6902e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/static/css/utils.css" />
+    <link rel="stylesheet" href="/static/css/scroll-bar.css" />
+    <link rel="stylesheet" href="/static/css/navbarStyles.css" />
+    <link rel="stylesheet" href="/static/css/headerStyles.css" />
+    <link rel="stylesheet" href="/static/css/mainStyles.css" />
+    <link rel="stylesheet" href="/static/css/footerStyles.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+    <script src="/static/js/styles.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="/static/imgs/logo.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav class="navbar h-resp">
+      <div class="logo v-resp">
+        <img src="/static/imgs/logo.png" alt="logo" />
+      </div>
+      <ul class="navlist v-resp">
+        <li><a href="/#">Home</a></li>
+        <li><a href="/static/VipulSnapper.zip" download>Download</a></li>
+        <li><a href="/use">Use Online</a></li>
+        <li><a href="/#about">About Us</a></li>
+        <li><a href="/#contact">Contact US</a></li>
+      </ul>
+      <div class="rightNav v-resp">
+        <input
+          type="text"
+          name=""
+          id=""
+          class="searchbar"
+          placeholder="Search..."
+        />
+        <button class="btn search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    {% block body %} {% endblock body %}
+    <footer id="footer">
+      <p id="footerContent">
+        CopyRights &copy; VipulSnapper.com {date} || All Rights Reserved
+      </p>
+      <div class="footer-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+    </footer>
+  </body>
+</html>

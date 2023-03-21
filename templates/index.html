@@ -1,0 +1,136 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock title %} {% block body %}
+<header>
+  <div class="firstSection">
+    <h1>Use AI powered SnapChat</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe quas
+      quibusdam, omnis perspiciatis dolorem porro tempore. Rem hic, ea maxime,
+      obcaecati quae sequi aut eaque nostrum, assumenda deleniti ab. Porro,
+      officia enim! Excepturi beatae inventore obcaecati? Quam esse non
+      similique tempora, ipsum totam. Sit dignissimos, perspiciatis repellat
+      assumenda aut explicabo aperiam consectetur pariatur odit eius nam qui
+      incidunt saepe doloremque et dolor, optio eveniet nostrum. Suscipit nisi
+      deserunt assumenda quisquam ullam odio, dolores, eligendi vitae
+      consequatur hic doloremque tempore ipsum?
+    </p>
+    <div class="buttons">
+      <a class="btn-sm" href="/use" style="text-decoration:none;">Use Now</a>
+      <a class="btn-sm" href="/static/VipulSnapper.zip" style="text-decoration:none;" download>Download</a>
+    </div>
+  </div>
+  <div class="image-header">
+    <img
+      src="https://source.unsplash.com/400x300/?snapchat,programming"
+      alt="image-header"
+    />
+  </div>
+</header>
+<main>
+  <section id="about">
+    <p class="section-header">About US</p>
+    <section id="about-main">
+      <section class="first">
+        <div class="card">
+          <img
+            src="https://source.unsplash.com/400x300/?snapchat,java"
+            alt="img"
+          />
+          <p class="bigtext">Easily Accessible to All</p>
+          <p class="smalltext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            reiciendis blanditiis cupiditate architecto velit ipsam amet sequi
+            eaque optio labore. Sint fugit quia officiis omnis accusamus enim!
+            Excepturi quidem, laboriosam nulla error adipisci, quo fuga amet sed
+            saepe deleniti tenetur delectus officiis, nobis quas hic eius odit
+            sequi porro consequuntur dolorum velit voluptatem? Quod, hic
+            recusandae autem minima, deleniti explicabo adipisci ratione
+            reprehenderit obcaecati necessitatibus reiciendis? Rerum,
+            dignissimos officiis. Cum dolorum vel ea eum magni ipsa odit dolorem
+            sunt est.
+          </p>
+        </div>
+      </section>
+      <section class="second">
+        <div class="card">
+          <img
+            src="https://source.unsplash.com/400x300/?snapchat,django"
+            alt="img"
+          />
+          <p class="bigtext">Use without Downloading</p>
+          <p class="smalltext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            reiciendis blanditiis cupiditate architecto velit ipsam amet sequi
+            eaque optio labore. Sint fugit quia officiis omnis accusamus enim!
+            Excepturi quidem, laboriosam nulla error adipisci, quo fuga amet sed
+            saepe deleniti tenetur delectus officiis, nobis quas hic eius odit
+            sequi porro consequuntur dolorum velit voluptatem? Quod, hic
+            recusandae autem minima, deleniti explicabo adipisci ratione
+            reprehenderit obcaecati necessitatibus reiciendis? Rerum,
+            dignissimos officiis. Cum dolorum vel ea eum magni ipsa odit dolorem
+            sunt est.
+          </p>
+        </div>
+      </section>
+      <section class="third">
+        <div class="card">
+          <img
+            src="https://source.unsplash.com/400x300/?snapchat,programming"
+            alt="img"
+          />
+          <p class="bigtext">Easy to Use & Super Fast</p>
+          <p class="smalltext">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id ut
+            possimus iusto autem sed facilis veniam rem ipsa magnam! Velit
+            cupiditate itaque debitis, nostrum, est atque accusamus facilis,
+            sapiente architecto fuga officia placeat tempora. Nisi, animi ab!
+            Minima nulla voluptate cumque, sequi suscipit ipsum error earum
+            illo, sapiente animi consectetur, nesciunt eaque autem quam libero
+            vero impedit? Nam reprehenderit magnam, sequi necessitatibus quo
+            dolorum rem quam ullam harum quis temporibus maiores libero cum
+            numquam sed facilis iure blanditiis ipsa eum.
+          </p>
+        </div>
+      </section>
+    </section>
+  </section>
+  <section id="contact">
+    <p class="section-header">Contact US</p>
+    <section id="contact-main">
+      <div class="form">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div>
+            <label for="name">Name: </label
+            ><input type="text" name="name" id="name" placeholder="Name" />
+          </div>
+          <div>
+            <label for="email">Email: </label
+            ><input type="text" name="email" id="email" placeholder="Email" />
+          </div>
+          <div>
+            <label for="password">Password: </label
+            ><input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+          </div>
+          <div>
+            <textarea
+              name="review"
+              id="review"
+              cols="30"
+              rows="10"
+              placeholder="Write your Review here."
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit" class="contact-btn-submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </section>
+</main>
+{% endblock body %}
